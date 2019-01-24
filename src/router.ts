@@ -15,5 +15,10 @@ export default new Router({
       name: 'personalTax',
       component: () => import('./views/personal-tax.vue'),
     },
+    {
+      path: '/helloWorld',
+      name: 'helloWorld',
+      component: () => import('./views/hello-world.vue'),
+    }
   ],
 });
