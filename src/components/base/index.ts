@@ -4,23 +4,15 @@ import BasePage from './base-page.vue'; //页面组件
 import BaseView from './base-view.vue'; //路由嵌套组件
 import Loading from "./loading"; // loading
 
-let MyPlugin = {};
-
-MyPlugin.install = function(Vue) {
-
-	if (this.installed) return;
-
-	Vue.component(BasePage.name, BasePage); //注册组件
-	Vue.component(BaseView.name, BaseView); //注册组件
-
-	Vue.$loading = Vue.prototype.$loading = Loading; //注册全局方法组件
-
+let MyPlugin = {
+  install(Vue:any) {
+  
+    Vue.component(BasePage.name, BasePage); //注册组件
+    Vue.component(BaseView.name, BaseView); //注册组件
+  
+    Vue.$loading = Vue.prototype.$loading = Loading; //注册全局方法组件
+  }
 };
-
-// auto install
-if (typeof window !== 'undefined' && window.Vue) {
-	MyPlugin.install(window.Vue);
-}
 
 Vue.use(MyPlugin)
 

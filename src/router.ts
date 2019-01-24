@@ -19,6 +19,11 @@ export default new Router({
       path: '/helloWorld',
       name: 'helloWorld',
       component: () => import('./views/hello-world.vue'),
+    },
+    {
+      path: '*',
+      name: '404',
+      component: () => import('./views/404.vue'),
     }
   ],
 });

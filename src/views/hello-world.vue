@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <basePage title="helloWorld">
     <cube-button @click="sandglass()">sandglass-loading</cube-button>
     <cube-button type="submit" @click="snake()">snake-loading</cube-button>
     <cube-button :active="true" @click="tripleBounce()">triple-bounce-loading</cube-button>
@@ -15,7 +15,7 @@
     </cube-checkbox-group>
     <cube-button :inline="inlineStyle" :outline="outlineStyle" :primary="primaryStyle">Demo Button</cube-button>
     <cube-button :disabled="true">Disabled Button</cube-button>
-  </div>
+  </basePage>
 </template>
 
 <script>

@@ -9,7 +9,7 @@
         <slot name="desc">{{desc}}</slot>
       </section>
       <main class="content">
-        <slot name="content">{{content}}</slot>
+        <slot></slot>
       </main>
     </div>
   </div>
@@ -17,22 +17,17 @@
 
 <script type="text/ecmascript-6">
 export default {
-  name: "base-page",
+  name: "basePage",
   props: {
     title: {
       type: String,
-      default: "",
-      required: true
+      default: "云忆",
     },
     type: {
       type: String,
       default: ""
     },
     desc: {
-      type: String,
-      default: ""
-    },
-    content: {
       type: String,
       default: ""
     }
