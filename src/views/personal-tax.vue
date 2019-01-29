@@ -1,5 +1,5 @@
 <template>
-  <basePage title="personalTax">
+  <basePage title="个税计算器">
     <div class="personal-tax">
       <div class="input-item">
         <label>工资</label>
