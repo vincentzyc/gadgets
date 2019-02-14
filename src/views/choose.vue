@@ -2,16 +2,16 @@
   <basePage title="帮你选">
     <div class="input-item" v-for="(item,key) in text_arr" :key="key">
       <input type="text" v-model="text_arr[key]" placeholder="请输入选项">
-      <i class="cubeic-close" @click="removeOption(key)"></i>
+      <i class="cubeic-close mg-l10" @click="removeOption(key)"></i>
     </div>
     <cube-button :primary="true" @click="addOption()" class="mg-t20">新增选项</cube-button>
     <div class="wrapper" v-show="showTurntable">
-      <div id="btn" @click="rotate()">
-        <div id="pointer" class="wheel-pointer">
+      <div class="choose-btn" @click="rotate()">
+        <div class="wheel-pointer">
           <i></i>
         </div>
         <div class="wheel-btn">
-          <a id="button" href="javascript:;">
+          <a href="javascript:;">
             <strong>帮你选</strong>
           </a>
         </div>
@@ -150,7 +150,7 @@ export default {
   -ms-transition: 3s;
 }
 
-#btn {
+.choose-btn {
   position: absolute;
   top: 50%;
   left: 50%;
