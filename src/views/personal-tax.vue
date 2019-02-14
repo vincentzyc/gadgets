@@ -28,7 +28,7 @@
 </template>
 
 <script>
-import TaxRateTable from './tax-rate-table.vue';
+import TaxRateTable from '@/components/tax-rate-table.vue';
 export default {
   components: {
     TaxRateTable

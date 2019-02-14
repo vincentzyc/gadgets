@@ -16,6 +16,11 @@ export default new Router({
       component: () => import('./views/personal-tax.vue'),
     },
     {
+      path: '/choose',
+      name: 'choose',
+      component: () => import('./views/choose.vue'),
+    },
+    {
       path: '/helloWorld',
       name: 'helloWorld',
       component: () => import('./views/hello-world.vue'),
