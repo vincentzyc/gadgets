@@ -17,7 +17,9 @@
         </div>
       </div>
       <canvas id="canvas_circle" width="300" height="300"></canvas>
-      <div>结果：{{result}}</div>
+      <div>结果：
+        <span class="resultTxt">{{result}}</span>
+      </div>
     </div>
     <cube-button :primary="true" @click="createdTurntable()" class="mg-t20">生成转盘</cube-button>
   </basePage>
@@ -160,6 +162,12 @@ export default {
   -o-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   z-index: 9999;
+}
+
+.resultTxt {
+  font-size: 18px;
+  color: #ff0000;
+  font-weight: bold;
 }
 
 .wheel-pointer {
