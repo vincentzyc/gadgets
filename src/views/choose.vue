@@ -17,7 +17,8 @@
         </div>
       </div>
       <canvas id="canvas_circle" width="300" height="300"></canvas>
-      <div>结果：
+      <div>
+        结果：
         <span class="resultTxt">{{result}}</span>
       </div>
     </div>
@@ -133,6 +134,13 @@ export default {
         }, 3050);
       }
     }
+  },
+  destroyed() {
+    this.$util.setLocalStorage('select_arr', this.text_arr);
+  },
+  created() {
+    let select_arr = this.$util.getLocalStorage('select_arr');
+    if (select_arr) this.text_arr = select_arr;
   }
 }
 </script>
