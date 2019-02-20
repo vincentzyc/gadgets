@@ -11,7 +11,11 @@
       </div>
       <div class="input-item">
         <label>公积金</label>
-        <input type="number" v-model.number="AccumulationFund" placeholder="请输入公积金">
+        <input type="number" v-model.number="accumulationFund" placeholder="请输入公积金">
+      </div>
+      <div class="input-item">
+        <label>专项扣除</label>
+        <input type="number" v-model.number="special" placeholder="请输入专项扣除总额">
       </div>
       <div class="input-item">
         <label>扣税金额</label>
@@ -37,7 +41,8 @@ export default {
     return {
       wages: 5000,
       socialSecurity: 380.34,
-      AccumulationFund: 105,
+      accumulationFund: 105,
+      special: "",
       result: "",
       taxDeduction: ""
     }
@@ -54,9 +59,9 @@ export default {
       if (amount > 80000) return amount * 0.45 - 15160;
     },
     computed() {
-      let amount = this.wages - this.socialSecurity - this.AccumulationFund - 5000;
+      let amount = this.wages - this.socialSecurity - this.accumulationFund - this.special - 5000;
       this.taxDeduction = this.computedWages(amount).toFixed(2);
-      this.result = amount + 5000 - this.taxDeduction;
+      this.result = this.wages - this.socialSecurity - this.accumulationFund - this.taxDeduction;
     }
   }
 }
