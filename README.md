@@ -1,4 +1,4 @@
-# vuecli3-ts
+# gadgets
 
 ## Project setup
 ```
