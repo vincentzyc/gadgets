@@ -64,6 +64,7 @@ export default {
       this.drawCircle("canvas_circle", this.text_arr); //调用画轮盘函数
       this.drawText("canvas_circle", this.text_arr); //调用画选项函数
       this.showTurntable = true;
+      this.$util.setLocalStorage('select_arr', this.text_arr);
     },
     drawCircle(canvasId, text_arr) {
       let c = document.getElementById(canvasId),
