@@ -40,7 +40,7 @@ export default {
   data() {
     return {
       wages: 5000,
-      socialSecurity: 380.34,
+      socialSecurity: 420.28,
       accumulationFund: 105,
       special: "",
       result: "",
